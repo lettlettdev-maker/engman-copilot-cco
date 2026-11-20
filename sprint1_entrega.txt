@@ -1,0 +1,16 @@
+CHALLENGE SPRINT 01 - ENGMAN COPILOT (FIAP x MOTIVA)
+
+Grupo: 4 
+Turma: CCP A 
+Recorte escolhido: B - Operacao e Priorizacao de Campo
+Projeto: EngMan Copilot - CCO Cameras
+Integrantes:
+Kalil Bachur - RM 576335 - Turma CCP A
+Isadora Couto - RM 576852 - Turma CCP A
+Letticia Aparecida Martins - RM 575441 - Turma CCP A
+Gustavo Valentim de Souza - RM 575916 - Turma CCP A
+Ohana Soares - RM 574691 - Turma CCP A
+
+Repositorio publico: https://github.com/lettlettdev-maker/engman-copilot-cco
+Fluxograma: docs/arquitetura.png
+

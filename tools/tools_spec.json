@@ -1,0 +1,178 @@
+{
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "consultar_ativo",
+        "description": "Consulta cadastro SIMULADO de uma câmera pela TAG exata. Usar antes de afirmar dados do ativo. Retorna ficha e fonte/versão ou ATIVO_NAO_ENCONTRADO; não cria cadastro.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "tag": {
+              "type": "string",
+              "minLength": 1,
+              "description": "TAG exata presente no catálogo de teste; exemplo fictício SIM-CFTV-001."
+            }
+          },
+          "required": [
+            "tag"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "consultar_historico_falhas",
+        "description": "Retorna registros SIMULADOS de falhas da TAG, filtrados por janela e tipo opcional. Usar para reincidência e histórico, sem confirmar causa atual apenas pelo passado. Lista vazia não prova ausência de falhas.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "tag": {
+              "type": "string",
+              "minLength": 1,
+              "description": "TAG validada no catálogo de teste."
+            },
+            "janela_meses": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 120,
+              "default": 12,
+              "description": "Janela retrospectiva em meses a partir da data do teste; padrão 12."
+            },
+            "tipo_falha": {
+              "type": "string",
+              "enum": [
+                "obstrucao",
+                "ambiental",
+                "desfoco",
+                "comunicacao",
+                "nao_identificada"
+              ],
+              "description": "Filtro opcional de falha; sem este campo retorna todos os tipos da janela."
+            }
+          },
+          "required": [
+            "tag"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "consultar_procedimento",
+        "description": "Retorna POP SIMULADO aplicável à câmera e intervenção, com versão, pré-requisitos e limites. Não improvisa instruções elétricas, trabalho em altura ou autorização em pista. Ausência retorna PROCEDIMENTO_NAO_ENCONTRADO.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "tipo_ativo": {
+              "type": "string",
+              "enum": [
+                "cftv"
+              ],
+              "description": "Único tipo de ativo coberto nesta versão."
+            },
+            "tipo_intervencao": {
+              "type": "string",
+              "enum": [
+                "corretiva",
+                "preventiva",
+                "inspecao",
+                "cbm"
+              ],
+              "description": "Tipo pretendido. O executor só retorna procedimentos existentes para esse tipo."
+            }
+          },
+          "required": [
+            "tipo_ativo",
+            "tipo_intervencao"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "abrir_ordem_servico",
+        "description": "Registra SOMENTE OS SIMULADA após confirmação humana dos campos e janela. Não opera em sistema real. Retorna número simulado e recibo; request_id evita duplicação. Em timeout não repetir: reconciliar solicitação.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "tag": {
+              "type": "string",
+              "minLength": 1,
+              "description": "TAG existente no catálogo fictício."
+            },
+            "tipo_intervencao": {
+              "type": "string",
+              "enum": [
+                "corretiva",
+                "preventiva",
+                "inspecao",
+                "cbm"
+              ],
+              "description": "Tipo confirmado para a proposta."
+            },
+            "prioridade": {
+              "type": "string",
+              "enum": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "description": "Prioridade fundamentada na matriz SIMULADA e confirmada pelo usuário."
+            },
+            "descricao": {
+              "type": "string",
+              "minLength": 10,
+              "maxLength": 2000,
+              "description": "Resumo técnico, evidências, hipótese e encaminhamento; sem dados pessoais."
+            },
+            "janela_inicio": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Data/hora ISO 8601 confirmada, com fuso; não inferir janela."
+            },
+            "janela_fim": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Data/hora ISO 8601 posterior ao início, validada pelo executor."
+            },
+            "confirmado": {
+              "type": "boolean",
+              "const": true,
+              "description": "Exige confirmação humana verificada pelo executor; valor sugerido pelo LLM não basta."
+            },
+            "simulado": {
+              "type": "boolean",
+              "const": true,
+              "description": "Impede uso contratual para abertura real."
+            },
+            "request_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100,
+              "description": "Identificador estável para idempotência e reconciliação de resultado incerto."
+            }
+          },
+          "required": [
+            "tag",
+            "tipo_intervencao",
+            "prioridade",
+            "descricao",
+            "janela_inicio",
+            "janela_fim",
+            "confirmado",
+            "simulado",
+            "request_id"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}
