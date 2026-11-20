@@ -726,7 +726,7 @@ Parâmetros para implementação futura; schemas não são prova de execução.
 
 **Arquivo completo:** [tools_spec.json](tools/tools_spec.json). Os quatro contratos estão preservados no arquivo técnico exigido pelo professor.
 
-## Arquivos da entrega da Sprint 01
+## Arquivos
 
 Os documentos técnicos exigidos também estão disponíveis separadamente para consulta e avaliação:
 
@@ -738,4 +738,3 @@ Os documentos técnicos exigidos também estão disponíveis separadamente para 
 - [Riscos, ética e LGPD](docs/riscos_lgpd.md)
 - [Arquivo TXT de submissão](sprint1_entrega.txt)
 
-**Observação:** as pendências, datas e referências a arquivos ainda não publicados nas seções originais refletem a versão de revisão do grupo de 10/11/2026. A estrutura publicada deve ser verificada diretamente no repositório.
