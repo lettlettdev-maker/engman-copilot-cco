@@ -2,9 +2,9 @@
 
 **Status:** especificação documental; não equivale a uma base operacional implementada. Dados SIMULADOS não pertencem à Motiva. A Sprint 01 exige inventário, não a construção integral da base.
 
-# . Base de conhecimento e inventário
+## Base de conhecimento e inventário
 
-A entrega exige inventário com pelo menos oito documentos, descrição, campos, origem e status. A base completa não foi recebida nem criada neste Word; abaixo está sua especificação. Dados operacionais serão sintéticos e identificados como SIMULADOS. Os exemplos da seção 7.2 são a única pequena massa de teste efetivamente escrita aqui.
+A entrega exige inventário com pelo menos oito documentos, descrição, campos, origem e status. A base completa ainda não foi recebida nem criada; abaixo está sua especificação. Dados operacionais serão sintéticos e identificados como SIMULADOS. Os exemplos da seção “Massa mínima de teste — integralmente SIMULADA” abaixo são a pequena massa de teste efetivamente documentada.
 
 1. Catálogo de ativos: simulado, a produzir; mínimo planejado de 30 linhas de câmeras. Campos: TAG, tipo, fabricante/modelo fictícios identificados, km fictício, local fictício, instalação, vida útil e criticidade. Fonte autoritativa de cadastro para consultar_ativo.
 
@@ -16,7 +16,7 @@ A entrega exige inventário com pelo menos oito documentos, descrição, campos,
 
 1. Fichas técnicas: reais somente quando obtidas de fabricante; simulações claramente marcadas, a produzir, cobrindo os modelos fictícios do catálogo. Nenhuma ficha de fabricante real foi fornecida.
 
-1. Matriz de criticidade e prioridade: simulada; versão de teste proposta na seção 7.2. Critérios de segurança, disponibilidade, impacto e necessidade de validação.
+1. Matriz de criticidade e prioridade: simulada; versão de teste apresentada na seção “Massa mínima de teste — integralmente SIMULADA” abaixo. Critérios de segurança, disponibilidade, impacto e necessidade de validação.
 
 1. Glossário: derivado do enunciado, a consolidar: CFTV, CCO, TAG, OS, POP, ITS, FSM, RAG, LLM e CBM. Não inventar expansão para sigla desconhecida.
 
