@@ -2,7 +2,7 @@
 
 **Status:** proposta acadêmica, não auditoria de segurança operacional da Motiva.
 
-# . Riscos e mitigações
+## Riscos e mitigações
 
 Cada risco tem impacto e rastreabilidade em regra do prompt, bloco de arquitetura e teste ou regra de base. O conjunto não é auditoria operacional da Motiva.
 
