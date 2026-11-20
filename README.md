@@ -717,14 +717,13 @@ Não foram consultados preços de componentes, regras de tarifa, normas internas
 
 Conteúdo estruturado proposto para o arquivo de testes. Status de execução: não executado. O contexto de cada caso é fixture de teste, não resposta efetivamente obtida de ferramenta.
 
-**Arquivo completo:** [sprint1_eval_set.json](evals/sprint1_eval_set.json). Os 14 casos estão preservados no arquivo técnico exigido pelo professor.
-
+**Arquivo completo:** [sprint1_eval_set.json](evals/sprint1_eval_set.json). 
 ## Anexo B. Contratos de ferramentas em JSON
 
 
 Parâmetros para implementação futura; schemas não são prova de execução.
 
-**Arquivo completo:** [tools_spec.json](tools/tools_spec.json). Os quatro contratos estão preservados no arquivo técnico exigido pelo professor.
+**Arquivo completo:** [tools_spec.json](tools/tools_spec.json). 
 
 ## Arquivos
 
