@@ -192,3 +192,8 @@ Não foram consultados preços de componentes, regras de tarifa, normas internas
 
 Arquivos: `README.md`, `.gitignore`, `docs/arquitetura.png`, `docs/riscos_lgpd.md`, `prompts/system_prompt.md`, `evals/sprint1_eval_set.json`, `data/knowledge_base/inventario.md`, `tools/tools_spec.json` e `sprint1_entrega.txt`. A seção de decisões técnicas fica neste README (arquivo adicional é opcional).
 
+
+
+## Preservação do documento original do grupo
+
+Para manter **integralmente acessíveis** as explicações, tabelas, observações, instruções e anexos que constavam no Word recebido, consulte a [transcrição do documento original](docs/documento_original_integral.md). Este material é uma referência histórica da versão de revisão; seu status de pendências pode estar desatualizado. A transcrição não substitui os artefatos exigidos nas pastas acima.
